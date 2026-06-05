@@ -1,6 +1,6 @@
 #Updated from Main folder updated from testing (Cldegem1i)
 
-# Enhanced Cinema Intelligence Platform v5
+# Enhanced Cinema Intelligence Platform v3
 # Complete Left Panel with Historical Analysis and Actionable Recommendations
 
 import streamlit as st
@@ -751,7 +751,7 @@ with search_col:
 st.divider()
 st.markdown("""
 <div style="text-align: center; color: #666; font-size: 0.85em;">
-    <p>Cinema Predictability Model v5 | Enhanced with TMDB Historical Analysis</p>
+    <p>Cinema Predictability Model v3 </p>
     <p>Left Panel: Predict future movies | Right Panel: Research existing films</p>
 </div>
 """, unsafe_allow_html=True)
