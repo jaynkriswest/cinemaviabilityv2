@@ -177,7 +177,7 @@ except ImportError as e:
 # LAYOUT STRUCTURE
 # =====================================================
 
-st.title("South Indian Cinema Predictability Model v5")
+st.title("South Indian Cinema Predictability Model v3")
 st.divider()
 
 prediction_col, search_col = st.columns([1.3, 1], gap="large")
@@ -462,7 +462,7 @@ with prediction_col:
             st.info("Run the analysis in the 'Input & Analysis' tab first to see historical comparisons.")
     
     with tab3:
-        st.subheader("💼 Strategic Recommendations")
+        st.subheader("Strategic Recommendations")
         
         if st.session_state.get('search_performed'):
             prediction = st.session_state.get('prediction', {})
@@ -566,7 +566,7 @@ with prediction_col:
                 st.success("Theater distribution looks optimal")
             
             # Content Strategy
-            st.markdown("### 🎬 Content & Positioning Strategy")
+            st.markdown("###Content & Positioning Strategy")
             
             content_score = movie_details.get('content_score', 75)
             
@@ -656,11 +656,11 @@ with prediction_col:
             
             # Final Action Plan
             st.divider()
-            st.markdown("### 📋 Executive Summary & Next Steps")
+            st.markdown("### Executive Summary & Next Steps")
             
             if pred_score >= 80:
                 st.success(f"""
-                **🟢 GREENLIGHT RECOMMENDED**
+                **GREENLIGHT RECOMMENDED**
                 
                 Your film has a **{pred_score}%** predictability score with **{roi:.1f}%** expected ROI.
                 
@@ -673,7 +673,7 @@ with prediction_col:
                 """)
             elif pred_score >= 70:
                 st.info(f"""
-                **🟡 PROCEED WITH CAUTION**
+                **PROCEED WITH CAUTION**
                 
                 Your film scores **{pred_score}%** with **{roi:.1f}%** expected ROI.
                 
@@ -686,7 +686,7 @@ with prediction_col:
                 """)
             else:
                 st.warning(f"""
-                **🔴 MAJOR CONCERNS**
+                **MAJOR CONCERNS**
                 
                 Your film scores only **{pred_score}%** with **{roi:.1f}%** expected ROI.
                 
@@ -705,7 +705,7 @@ with prediction_col:
 # RIGHT PANEL - SEARCH (EXISTING FUNCTIONALITY)
 # =====================================================
 with search_col:
-    st.header("🔍 Historical Reference Search")
+    st.header("Historical Reference Search")
     st.markdown("*Search existing movies for inspiration*")
     
     query = st.text_input("Search Regional Reference Title", key="right_panel_title_query", placeholder="e.g., Pushpa, RRR, Varisu...")
@@ -751,7 +751,7 @@ with search_col:
 st.divider()
 st.markdown("""
 <div style="text-align: center; color: #666; font-size: 0.85em;">
-    <p>🎬 Cinema Predictability Model v5 | Enhanced with TMDB Historical Analysis</p>
+    <p>Cinema Predictability Model v5 | Enhanced with TMDB Historical Analysis</p>
     <p>Left Panel: Predict future movies | Right Panel: Research existing films</p>
 </div>
 """, unsafe_allow_html=True)
